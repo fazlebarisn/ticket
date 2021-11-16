@@ -12,15 +12,17 @@
         </div>
 
     </form>
+    @foreach ($comments as $comment)
         <div class="rounded border shadow p-3 my-2">
 
             <div class="flex justify-start my-2">
-                <p class="font-bold text-lg">kkkkkkk</p>
-                <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">nnnnnnnn</p>
+                <p class="font-bold text-lg">{{ $comment->user->name }}</p>
+                <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{ $comment->created_at->diffForHumans() }}</p>
             </div>
 
-            <p class="text-gray-800">nnnnn</p>
+            <p class="text-gray-800">{{ $comment->body }}</p>
 
-        </div>  
+        </div>
+    @endforeach  
 
 </div>
