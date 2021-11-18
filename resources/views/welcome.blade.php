@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <livewire:comments :comments="$comments" />
+    <livewire:comments />
     @livewireScripts
 </body>
 
